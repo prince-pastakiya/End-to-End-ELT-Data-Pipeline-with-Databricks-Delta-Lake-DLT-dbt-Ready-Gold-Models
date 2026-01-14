@@ -16,20 +16,23 @@ This project implements a **multi-layer ELT architecture**:
 
 The design is **dynamic and reusable**, allowing new datasets to be onboarded with minimal configuration changes.
 
+![ELT Pipeline Overview](assets/ELT-Pipeline.png)
+
 ---
 
 ## 🏗️ Architecture
 
-Raw CSV Files
-   ↓
-Bronze Layer (Auto Loader, Delta)
-   ↓
-Silver Layer (DLT, CDC, Data Quality)
-   ↓
-Gold Layer (Dimensions & Facts)
-   ↓
-Analytics / BI / dbt
-
+```
+   Raw CSV Files
+         ↓
+   Bronze Layer (Auto Loader, Delta)
+         ↓
+   Silver Layer (DLT, CDC, Data Quality)
+         ↓
+   Gold Layer (Dimensions & Facts)
+         ↓
+   Analytics / BI / dbt
+```
 ---
 
 ## 🧱 Data Layers
@@ -114,21 +117,6 @@ By changing parameters such as:
 - Databricks Auto Loader
 - Streaming CDC
 - dbt-ready Gold models
-
----
-
-## 📂 Project Structure
-
-├── notebooks/
-│ ├── Setup.ipynb
-│ ├── BronzeLayer.ipynb
-│ ├── Gold_Dims.ipynb
-│ ├── Gold_Fact_Table.ipynb
-│
-├── pipelines/
-│ └── Pipeline.py
-│
-├── README.md
 
 ---
 
